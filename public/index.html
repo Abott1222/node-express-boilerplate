@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>This is a test page</title>
+  </head>
+  <body>
+    <div id="message"></div>
+    <script>
+      fetch('/api').then(function(data){
+        return data.json();
+      })
+      .then(function(data){
+        document.querySelector('#message').innerHTML = data.message
+      })
+    </script>
+  </body>
+</html>
